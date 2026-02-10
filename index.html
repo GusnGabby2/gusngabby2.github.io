@@ -15,28 +15,53 @@
 
   <body>
     <nav>
-      <p>Braden Coghlan</p>
-      <p><a href="contact.html">Contact Braden Coghlan</a></p>
+      <div class="brand">
+        <span class="brand-mark">BC</span>
+        <span class="brand-name">Braden Coghlan</span>
+      </div>
+      <div class="nav-actions">
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#skills">Skills</a>
+      </div>
     </nav>
 
-    <!-- Splash / Top Area -->
-    <header>
-      <h1>Braden Coghlan</h1>
-
-      <img
-        src="images/Headshot.jpg"
-        alt="Headshot of Braden Coghlan"
-        width="200"
-      />
-
-      <p class="address">
-        Atlanta, Georgia &bull; (614) 680-5741 &bull; bradenlewis44@gmail.com
-        &bull; linkedin.com/in/braden-coghlan &bull; github.com/GusnGabby2
-      </p>
-
-      <p class="tagline">Software Engineering</p>
-
-      <hr />
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Software Engineering • Data</p>
+        <h1>Braden Coghlan</h1>
+        <p class="lead">
+          I build fast, reliable software and tools that make engineers more effective. From
+          instrumentation replay systems to full-stack platforms, I ship clean interfaces and
+          durable backends.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="contact.html">Contact Me</a>
+        </div>
+        <div class="hero-meta">
+          Atlanta, Georgia &bull; (614) 680-5741 &bull; bradenlewis44@gmail.com
+        </div>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/braden-coghlan" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/GusnGabby2" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="portrait-wrap">
+          <img src="images/Headshot.jpg" alt="Headshot of Braden Coghlan" />
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Graduation</span>
+          <span class="stat-value">May 2026</span>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -50,15 +75,16 @@
           <span class="highlight-value">10+</span>
         </div>
         <div class="highlight">
-          <span class="highlight-label">GPA</span>
-          <span class="highlight-value">3.5</span>
+          <span class="highlight-label">Leadership</span>
+          <span class="highlight-value">Sports Analytics Club</span>
         </div>
         <div class="highlight">
-          <span class="highlight-label">Graduation</span>
-          <span class="highlight-value">May 2026</span>
+          <span class="highlight-label">Certificates</span>
+          <span class="highlight-value">Applied Date Science</span>
         </div>
       </section>
-      <section>
+
+      <section id="education">
         <h2>Education</h2>
         <dl>
           <dt>University of Georgia</dt>
@@ -93,13 +119,11 @@
         </dl>
       </section>
 
-      <section>
+      <section id="experience">
         <h2>Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-role">
-              Software Engineering Intern, Terma Group
-            </div>
+            <div class="timeline-role">Software Engineering Intern, Terma Group</div>
             <div class="timeline-meta">Atlanta, GA &bull; May 2025 – Present</div>
             <ul class="timeline-points">
               <li>
@@ -142,10 +166,9 @@
         </div>
       </section>
 
-      <section>
+      <section id="projects">
         <div class="projects-head">
           <h2>Projects</h2>
-          <span class="scroll-hint">Scroll to explore</span>
         </div>
         <div class="three-col">
           <a
@@ -154,6 +177,7 @@
             target="_blank"
             rel="noopener"
           >
+            <div class="card-tag">Full-stack</div>
             <h3>Dawgorithms - Club Management Platform</h3>
             <p>Jan 2026</p>
             <img
@@ -186,13 +210,10 @@
             target="_blank"
             rel="noopener"
           >
+            <div class="card-tag">XR</div>
             <h3>VR Volleyball Training Simulator</h3>
             <p>November 2025</p>
-            <img
-              src="images/VR.png"
-              alt="VR Volleyball Training Simulator"
-              width="300"
-            />
+            <img src="images/VR.png" alt="VR Volleyball Training Simulator" width="300" />
             <ul>
               <li>
                 Built a VR volleyball training app in Unity/C# for Meta Quest 3
@@ -213,13 +234,10 @@
             target="_blank"
             rel="noopener"
           >
+            <div class="card-tag">Web</div>
             <h3>Online Book Store</h3>
             <p>May 2025 – July 2025</p>
-            <img
-              src="images/book.png"
-              alt="Online Book Store project"
-              width="300"
-            />
+            <img src="images/book.png" alt="Online Book Store project" width="300" />
             <ul>
               <li>
                 Built a full-stack app with Django REST API, Next.js/React
@@ -239,6 +257,7 @@
             target="_blank"
             rel="noopener"
           >
+            <div class="card-tag">JavaFX</div>
             <h3>Travel and Weather App</h3>
             <p>December 2024</p>
             <img src="images/weather.jpeg" alt="Weather App project" width="300" />
@@ -252,37 +271,39 @@
         </div>
       </section>
 
-      <section>
+      <section id="skills">
         <h2>Skills</h2>
-        <div class="skills-group">
-          <h3>Languages</h3>
-          <ul>
-            <li>C++</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>R</li>
-            <li>SQL</li>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>Lua</li>
-          </ul>
-        </div>
-        <div class="skills-group">
-          <h3>Tools and Tech</h3>
-          <ul>
-            <li>Git</li>
-            <li>Green Hills</li>
-            <li>Android Studio</li>
-            <li>R-Studio</li>
-            <li>Wireshark</li>
-            <li>Linux</li>
-            <li>BitBucket</li>
-            <li>Jira</li>
-            <li>Confluence</li>
-            <li>Unity</li>
-          </ul>
+        <div class="skills-grid">
+          <div class="skills-group">
+            <h3>Languages</h3>
+            <ul>
+              <li><i class="fas fa-microchip"></i> C++ <span class="tier">Advanced</span></li>
+              <li><i class="fas fa-code"></i> C <span class="tier">Advanced</span></li>
+              <li><i class="fas fa-cubes"></i> C# <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-java"></i> Java <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-python"></i> Python <span class="tier">Advanced</span></li>
+              <li><i class="fas fa-chart-line"></i> R <span class="tier">Proficient</span></li>
+              <li><i class="fas fa-database"></i> SQL <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-html5"></i> HTML/CSS <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-js"></i> JavaScript <span class="tier">Proficient</span></li>
+              <li><i class="fas fa-terminal"></i> Lua <span class="tier">Proficient</span></li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3>Tools and Tech</h3>
+            <ul>
+              <li><i class="fab fa-git-alt"></i> Git <span class="tier">Advanced</span></li>
+              <li><i class="fas fa-microchip"></i> Green Hills <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-android"></i> Android Studio <span class="tier">Proficient</span></li>
+              <li><i class="fas fa-chart-bar"></i> R-Studio <span class="tier">Proficient</span></li>
+              <li><i class="fas fa-network-wired"></i> Wireshark <span class="tier">Advanced</span></li>
+              <li><i class="fab fa-linux"></i> Linux <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-bitbucket"></i> BitBucket <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-jira"></i> Jira <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-confluence"></i> Confluence <span class="tier">Proficient</span></li>
+              <li><i class="fab fa-unity"></i> Unity <span class="tier">Proficient</span></li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -298,5 +319,30 @@
         </a>
       </p>
     </footer>
+    <button
+      class="theme-toggle floating"
+      type="button"
+      aria-pressed="false"
+      aria-label="Toggle theme"
+    >
+      <span class="toggle-track" aria-hidden="true"></span>
+    </button>
+    <script>
+      const toggle = document.querySelector(".theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      const initialTheme = storedTheme || (prefersLight ? "light" : "dark");
+
+      document.documentElement.setAttribute("data-theme", initialTheme);
+      toggle.setAttribute("aria-pressed", initialTheme === "dark" ? "true" : "false");
+
+      toggle.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        toggle.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
+      });
+    </script>
   </body>
 </html>
