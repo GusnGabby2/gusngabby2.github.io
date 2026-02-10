@@ -30,8 +30,8 @@
       />
 
       <p class="address">
-        1001 Titan Drive #329A, Athens, GA 30605 &bull; (614) 680-5741 &bull;
-        bradenlewis44@gmail.com
+        Atlanta, Georgia &bull; (614) 680-5741 &bull; bradenlewis44@gmail.com
+        &bull; linkedin.com/in/braden-coghlan &bull; github.com/GusnGabby2
       </p>
 
       <p class="tagline">Software Engineering</p>
@@ -40,102 +40,261 @@
     </header>
 
     <main>
+      <section class="highlights">
+        <div class="highlight">
+          <span class="highlight-label">Internships</span>
+          <span class="highlight-value">1</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-label">Languages</span>
+          <span class="highlight-value">10+</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-label">GPA</span>
+          <span class="highlight-value">3.5</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-label">Graduation</span>
+          <span class="highlight-value">May 2026</span>
+        </div>
+      </section>
       <section>
-        <h2>Education.</h2>
+        <h2>Education</h2>
         <dl>
           <dt>University of Georgia</dt>
-          <dd>GPA: 3.5</dd>
+          <dd>BS in Computer Science, Minor in Statistics</dd>
 
-          <dt>Bachelor of Science</dt>
-          <dd>Graduation: May 2026</dd>
+          <dt>Graduation</dt>
+          <dd>May 2026</dd>
+
+          <dt>GPA</dt>
+          <dd>3.5</dd>
+
+          <dt>Certifications</dt>
+          <dd>Applied Data Science</dd>
+
+          <dt>Achievements</dt>
+          <dd>Dean's List: Fall 2023, Summer 2025</dd>
+
+          <dt>Clubs and Activities</dt>
+          <dd>
+            Sports Analytics Club (Leadership), Pickleball Club, UGA School of
+            Computing Study Abroad, UGAHacks11
+          </dd>
+
+          <dt>Relevant Coursework</dt>
+          <dd>
+            Data Structures, Algorithms, Computer Networks, Computer
+            Architecture, Mobile SW Development, VR Development, Software
+            Engineering, Web Programming, Data Science, Statistical Programming,
+            Applied Regression Analysis, Quality Statistical Assurance, Applied
+            Experimental Design
+          </dd>
         </dl>
       </section>
 
       <section>
-        <h2>Honors and Awards.</h2>
-        <dl>
-          <dt>Dean's List</dt>
-          <dd>Fall 2023</dd>
-
-          <dt>Dean's List</dt>
-          <dd>Summer 2025</dd>
-        </dl>
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-role">
+              Software Engineering Intern, Terma Group
+            </div>
+            <div class="timeline-meta">Atlanta, GA &bull; May 2025 – Present</div>
+            <ul class="timeline-points">
+              <li>
+                Helped build OASIS in C++ from the ground up, an internal test
+                tool that replays and validates Ethernet instrumentation traffic
+                in software to avoid long hardware-in-the-loop test sessions.
+              </li>
+              <li>
+                Extended OASIS to ingest real recorder data and internal message
+                formats so teams can reproduce issues, analyze timing, and
+                verify configurations without lab hardware.
+              </li>
+              <li>
+                Built a Wireshark Lua plugin for the instrumentation protocol
+                that surfaces IDs, data sizes, timestamps, counters, and
+                bitfields for faster debugging.
+              </li>
+              <li>
+                Led migration of a legacy AppServ stack from Windows XP to
+                Windows 11, including full DB dump/restore and privilege
+                recreation, improving stability and performance.
+              </li>
+              <li>
+                Building a Python/Tkinter Test App Assistant that captures
+                Discrete/Ethernet/Serial/1553 inputs and generates TestApp/EQT
+                test scripts for repeatable hardware test execution.
+              </li>
+              <li>
+                Implemented script generation and logging (save/clear state
+                handling, input validation, formatted output) to reduce manual
+                edits for engineers.
+              </li>
+              <li>
+                Documented setup and usage for OASIS, the Wireshark plugin, and
+                the migrated stack, collaborating via Git/PRs to ease
+                onboarding.
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h2>Skills.</h2>
-        <ul>
-          <li>HTML</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>CSS</li>
-          <li>Python</li>
-          <li>C++</li>
-          <li>Git</li>
-          <li>SQL</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Leadership and Experience.</h2>
-        <dl>
-          <dt>
-            <a href="https://www.terma.com/" target="_blank">
-              Software Engineer Intern at Terma
-            </a>
-          </dt>
-          <dd>2025–Present</dd>
-
-          <dt>Freight Associate at The Home Depot</dt>
-          <dd>2024–2024</dd>
-        </dl>
-      </section>
-
-      <section>
-        <h2>Projects.</h2>
-
+        <div class="projects-head">
+          <h2>Projects</h2>
+          <span class="scroll-hint">Scroll to explore</span>
+        </div>
         <div class="three-col">
-          <div class="card">
+          <a
+            class="card project-link"
+            href="https://dawgorithms.vercel.app/"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3>Dawgorithms - Club Management Platform</h3>
+            <p>Jan 2026</p>
+            <img
+              src="images/dawgorithms.png"
+              alt="Dawgorithms Club Management Platform"
+              width="300"
+            />
+            <ul>
+              <li>
+                Built a full-stack club management web app using Next.js,
+                Node/Express, and MongoDB Atlas.
+              </li>
+              <li>
+                Delivered a deploy-ready prototype under a time-boxed hackathon
+                deadline with end-to-end data flow.
+              </li>
+              <li>
+                Implemented REST APIs and database models for club
+                creation/listing, wiring frontend pages to live endpoints.
+              </li>
+              <li>
+                Deployed with Vercel and Render, configuring environment
+                variables and production routing.
+              </li>
+            </ul>
+          </a>
+          <a
+            class="card project-link"
+            href="https://ugavr2025.github.io/final-project-website-immersivedawgs/"
+            target="_blank"
+            rel="noopener"
+          >
             <h3>VR Volleyball Training Simulator</h3>
+            <p>November 2025</p>
             <img
               src="images/VR.png"
               alt="VR Volleyball Training Simulator"
               width="300"
             />
             <ul>
-              <li>Built with Unity and C#</li>
+              <li>
+                Built a VR volleyball training app in Unity/C# for Meta Quest 3
+                with Ready/Start world-space UI, a laser-pointer world mouse, and
+                an onboarding flow that guides players into the court.
+              </li>
+              <li>
+                Developed VR grab and highlight mechanics so players can
+                raycast, select, and reposition NPCs with network ownership and
+                synced movement across clients.
+              </li>
             </ul>
-          </div>
+          </a>
 
-          <div class="card">
-            <h3>Online Bookstore</h3>
+          <a
+            class="card project-link"
+            href="https://github.com/jbb32104/csci-4050-bookstore"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3>Online Book Store</h3>
+            <p>May 2025 – July 2025</p>
             <img
               src="images/book.png"
-              alt="Online Bookstore project"
+              alt="Online Book Store project"
               width="300"
             />
             <ul>
-              <li>Built in Django framework</li>
+              <li>
+                Built a full-stack app with Django REST API, Next.js/React
+                TypeScript, and MySQL featuring auth, profiles, shipping, and a
+                clean component-based UI.
+              </li>
+              <li>
+                Implemented payment-method CRUD with masked display, server-side
+                validation, and optional add at signup.
+              </li>
             </ul>
-          </div>
+          </a>
 
-          <div class="card">
-            <h3>Weather App</h3>
+          <a
+            class="card project-link"
+            href="https://www.youtube.com/watch?v=7wIVMM-1wSQ&themeRefresh=1"
+            target="_blank"
+            rel="noopener"
+          >
+            <h3>Travel and Weather App</h3>
+            <p>December 2024</p>
             <img src="images/weather.jpeg" alt="Weather App project" width="300" />
             <ul>
-              <li>Built using Java</li>
+              <li>
+                Designed and developed a JavaFX application to display travel
+                and weather information by integrating APIs.
+              </li>
             </ul>
-          </div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skills-group">
+          <h3>Languages</h3>
+          <ul>
+            <li>C++</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>R</li>
+            <li>SQL</li>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Lua</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h3>Tools and Tech</h3>
+          <ul>
+            <li>Git</li>
+            <li>Green Hills</li>
+            <li>Android Studio</li>
+            <li>R-Studio</li>
+            <li>Wireshark</li>
+            <li>Linux</li>
+            <li>BitBucket</li>
+            <li>Jira</li>
+            <li>Confluence</li>
+            <li>Unity</li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer>
       <p>
-        <a href="https://www.linkedin.com/in/braden-coghlan" target="_blank">Braden Coghlan</a>
+        Braden Coghlan
         <a href="https://www.linkedin.com/in/braden-coghlan" target="_blank">
           <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/GusnGabby2" target="_blank">
+          <i class="fab fa-github"></i>
         </a>
       </p>
     </footer>
