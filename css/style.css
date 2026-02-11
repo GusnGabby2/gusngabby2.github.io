@@ -943,6 +943,10 @@ footer i {
   text-align: center;
 }
 
+.one-col.reveal {
+  margin-top: 32px;
+}
+
 input,
 textarea {
   width: 100%;

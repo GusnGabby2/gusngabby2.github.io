@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="reveal">
       <div class="brand">
         <span class="brand-mark">BC</span>
         <span class="brand-name">Braden Coghlan</span>
@@ -27,8 +27,8 @@
       </div>
     </nav>
 
-    <div class="one-col">
-      <header>
+    <div class="one-col reveal">
+      <header class="reveal">
         <h1>Braden Coghlan</h1>
 
         <p class="address">
@@ -39,7 +39,7 @@
         <hr />
       </header>
 
-      <section>
+      <section class="reveal">
         <form method="POST" action="https://formsubmit.co/your_unique_form_id">
           <p>
             Name (required)<br />
@@ -61,7 +61,7 @@
       </section>
     </div>
 
-    <footer>
+    <footer class="reveal">
       <p>
         Braden Coghlan
         <a href="https://www.linkedin.com/in/braden-coghlan" target="_blank">
@@ -72,5 +72,44 @@
         </a>
       </p>
     </footer>
+    <button
+      class="theme-toggle floating"
+      type="button"
+      aria-pressed="false"
+      aria-label="Toggle theme"
+    >
+      <span class="toggle-track" aria-hidden="true"></span>
+    </button>
+    <script>
+      const toggle = document.querySelector(".theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      const initialTheme = storedTheme || (prefersLight ? "light" : "dark");
+
+      document.documentElement.setAttribute("data-theme", initialTheme);
+      toggle.setAttribute("aria-pressed", initialTheme === "dark" ? "true" : "false");
+
+      toggle.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        toggle.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
+      });
+
+      const revealItems = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
   </body>
 </html>
