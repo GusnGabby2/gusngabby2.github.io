@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="reveal">
       <div class="brand">
         <span class="brand-mark">BC</span>
         <span class="brand-name">Braden Coghlan</span>
@@ -27,7 +27,7 @@
       </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero reveal">
       <div class="hero-content">
         <p class="eyebrow">Software Engineering • Data</p>
         <h1>Braden Coghlan</h1>
@@ -65,7 +65,7 @@
     </header>
 
     <main>
-      <section class="highlights">
+      <section class="highlights reveal">
         <div class="highlight">
           <span class="highlight-label">Internships</span>
           <span class="highlight-value">1</span>
@@ -84,7 +84,7 @@
         </div>
       </section>
 
-      <section id="education">
+      <section id="education" class="reveal">
         <h2>Education</h2>
         <dl>
           <dt>University of Georgia</dt>
@@ -119,7 +119,7 @@
         </dl>
       </section>
 
-      <section id="experience">
+      <section id="experience" class="reveal">
         <h2>Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
@@ -166,7 +166,7 @@
         </div>
       </section>
 
-      <section id="projects">
+      <section id="projects" class="reveal">
         <div class="projects-head">
           <h2>Projects</h2>
         </div>
@@ -271,7 +271,7 @@
         </div>
       </section>
 
-      <section id="skills">
+      <section id="skills" class="reveal">
         <h2>Skills</h2>
         <div class="skills-grid">
           <div class="skills-group">
@@ -308,7 +308,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="reveal">
       <p>
         Braden Coghlan
         <a href="https://www.linkedin.com/in/braden-coghlan" target="_blank">
@@ -343,6 +343,20 @@
         localStorage.setItem("theme", next);
         toggle.setAttribute("aria-pressed", next === "dark" ? "true" : "false");
       });
+
+      const revealItems = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      revealItems.forEach((item) => revealObserver.observe(item));
     </script>
   </body>
 </html>
